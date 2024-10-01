@@ -257,7 +257,7 @@ input:valid ~ span {
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 850px) {
     body {
         background-color: var(--opac-white);
     }
@@ -293,9 +293,10 @@ input:valid ~ span {
 
     .form-container {
         width: 90%; 
-        margin: 20px; 
+      
         padding: 15px; 
         display: block; 
+        margin:20px 0px;
     }
 
     .form-header {
@@ -307,16 +308,18 @@ input:valid ~ span {
     }
 
     .input-container input {
-        font-size: 14px; 
+        font-size: 12px; 
         padding: 8px; 
         margin-bottom: 10px; 
+        width: auto;
     }
 
     .submit-btn, .reset-btn {
-        padding: 8px; 
-        font-size: 16px; 
+        padding: 6px; 
+        font-size: 14px; 
         width: 100%; 
         margin-left:0;
+        margin-right: 0;
         
     }
 .waves {
@@ -326,6 +329,9 @@ input:valid ~ span {
     .btm-text {
         font-size: 14px; 
         margin-top: 4px;
+    }
+    .mode,.moon,.sun{
+      display: none;
     }
 }
 
