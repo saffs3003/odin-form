@@ -256,6 +256,7 @@ input:valid ~ span {
     color: var(--cyny-blue);
 }
 
+
 @media only screen and (max-width: 700px) {
     body {
         background-color: var(--opac-white);
@@ -266,55 +267,68 @@ input:valid ~ span {
         align-items: center;
     }
 
-    .side-hero {
-        width: 100vw;
-        height: 250px;
-    }
+  .side-hero {
+    height: auto;
+    width: 100vw; 
+   
+
+    justify-content: center;
+    align-items: center;
+}
+
 
     .company {
         font-size: 2rem;
-        top: 0.01rem;
+     top:100px;
+    padding: 10px;
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
     }
 
     .side-hero img {
-        height: 80%;
-        object-fit: cover;
+        height: 80%; 
+        object-fit: cover; 
     }
 
     .form-container {
-        width: 100%;
-        margin: 200px;
-        padding: 15px;
-        display: block;
+        width: 90%; 
+        margin: 20px; 
+        padding: 15px; 
+        display: block; 
     }
 
     .form-header {
-        font-size: 1.5rem;
-      
+        font-size: 1.5rem; 
     }
 
     .input-container {
-        margin: 20px;
+        margin: 10px 0;
     }
 
     .input-container input {
-        font-size: 14px;
-        padding: 8px;
-        margin-bottom: 10px;
+        font-size: 14px; 
+        padding: 8px; 
+        margin-bottom: 10px; 
     }
 
-    .submit-btn {
-        padding: 12px;
-        font-size: 14px;
+    .submit-btn, .reset-btn {
+        padding: 8px; 
+        font-size: 16px; 
+        width: 100%; 
+        margin-left:0;
+        
     }
-
+.waves {
+    width: 100%;
+    height: auto; 
+}
     .btm-text {
-        font-size: 8px;
+        font-size: 14px; 
+        margin-top: 4px;
     }
 }
+
 
 @keyframes slidein {
     from {
