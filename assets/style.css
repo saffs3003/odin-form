@@ -1,0 +1,317 @@
+
+:root {
+    /* Light Mode Variables */
+    --red: rgb(149, 21, 72);
+    --blue: rgb(13, 17, 136);
+    --opac-white: rgba(255, 255, 255, .8);
+    --form-txt: rgba(255, 255, 255, .5);
+    --dark: #1d2b3a;
+    --light-grey: rgb(105, 105, 105);
+    --cyny-blue: rgb(52, 36, 204);
+    --input-dark: #E5E7EB;
+    --bg-color: #ffffff; /* Light background */
+    --text-color: #000000; /* Light text */
+    --input-bg: #f5f5f5; /* Input background in light mode */
+    --border-color: rgba(0, 0, 0, 0.4); /* Light mode border */
+    --quote-color: black;
+   
+}
+
+body.dark-mode {
+    /* Dark Mode Variables */
+    --bg-color: #121212; /* Dark background */
+    --text-color: #f5f5f5; /* Light text on dark mode */
+    --dark: #f5f5f5; /* Inverted dark color for text */
+    --form-txt: rgba(255, 255, 255, 0.8); /* Lighter form text */
+    --input-bg: #333; /* Dark background for input */
+    --opac-white: rgba(255, 255, 255, .1); /* Lower opacity white */
+    --input-dark: #333; /* Input border color */
+    --border-color: rgba(255, 255, 255, 0.4); /* Dark mode border */
+    --quote-color: #f5f5f5;
+     --cyny-blue: rgb(93, 205, 236);
+    
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.hide{
+  display: none;
+}
+
+.card-container {
+    display: flex;
+}
+
+.side-hero {
+    height: 100vh;
+    position: relative;
+    width: 30vw;
+}
+
+.side-hero>img {
+    height: 100vh;
+    width: 100%;
+    filter: brightness(70%);
+}
+
+.hide>.company {
+    display: block;
+    position: sticky;
+    width: 100%;
+    padding: auto;
+    top: 0px;
+}
+
+.quote {
+   grid-column: span 2;
+
+ 
+  
+    color: var(--quote-color);
+ 
+   
+   
+}
+
+span {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.4s;
+    color: var(--text-color);
+}
+
+.sun {
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    background-color: #f4e453;
+    position: relative;
+    top: 8px;
+    right: -10px;
+}
+
+.moon {
+    width: 30px;
+    height: 30px;
+    background-color: #f0e68c;
+    border-radius: 50%;
+    position: relative;
+    left: 60px;
+   top: 8px;
+}
+
+.moon::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    left: -10px;
+    
+}
+
+.mode {
+    width: 100px;
+    height: 45px;
+    border-radius: 40px;
+    position: absolute;
+    border: 2px solid var(--border-color);
+    margin-top: 20px;
+    right: 45px;
+}
+
+.company {
+    position: absolute;
+    top: 4rem;
+    height: 4rem;
+    color: beige;
+    text-align: center;
+    background-color: rgba(3, 7, 85, 0.8);
+    width: 100%;
+    z-index: 1;
+    animation: slidein 2s;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 72px;
+    row-gap: 40px;
+    margin: 50px;
+    margin-left: 100px;
+}
+
+.form-container>:first-child {
+    grid-column: span 2;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.form-header {
+    margin: 10px;
+    font-size: 2.2rem;
+}
+body.dark-mode .sun {
+    display: none;
+}
+
+body.light-mode .moon {
+    display: none;
+}
+input {
+    display: block;
+    border-radius: 4px;
+    border: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding: 8px;
+    margin-top: 5px;
+    background-color: var(--input-bg);
+    transition: all 0.5s ease-in;
+    color: var(--text-color);
+    min-width: 250px;
+}
+
+input~span {
+    font-size: 16px;
+}
+
+input:focus ~ span,
+input:valid ~ span {
+    transform: translateX(3px) translateY(2px);
+    font-size: 0.8rem;
+    color: var(--text-color);
+}
+
+[type="submit"] {
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 5px 0px;
+    border: 2px solid var(--blue);
+    background-color: var(--blue);
+    color: white;
+}
+
+[type="reset"] {
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 5px 0px;
+    margin-left: 20px;
+    border: 2px solid var(--blue);
+    background-color: white;
+    color: var(--blue);
+}
+
+[type="submit"]:hover,[type='reset']:hover {
+    background-color: var(--cyny-blue);
+    color: white;
+    border: 1px solid var(--cyny-blue);
+    cursor: pointer;
+}
+#btm{
+    grid-column: span 2;
+}
+.btm-text {
+    font-size: 0.8rem;
+    margin-top: 1px;
+}
+
+.btm-text-highlighted {
+    color: var(--cyny-blue);
+    font: bold;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.btm-text-highlighted:hover {
+    text-decoration: underline;
+    font: bolder;
+    color: var(--cyny-blue);
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        background-color: var(--opac-white);
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side-hero {
+        width: 100vw;
+        height: 250px;
+    }
+
+    .company {
+        font-size: 2rem;
+        top: 0.01rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .side-hero img {
+        height: 80%;
+        object-fit: cover;
+    }
+
+    .form-container {
+        width: 100%;
+        margin: 100px;
+        padding: 15px;
+        display: block;
+    }
+
+    .form-header {
+        font-size: 1.5rem;
+      
+    }
+
+    .input-container {
+        margin: 20px;
+    }
+
+    .input-container input {
+        font-size: 14px;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    .submit-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .btm-text {
+        font-size: 8px;
+    }
+}
+
+@keyframes slidein {
+    from {
+        translate: -100vw 0;
+        scale: 100% 1;
+    }
+
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
+}
