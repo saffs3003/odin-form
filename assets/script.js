@@ -155,3 +155,18 @@ form.addEventListener('submit', function (event) {
         form.submit(); // Submit the form if all validations pass
     }
 });
+function setInitialMode() {
+  const isDarkMode = document.body.classList.contains('dark-mode');
+  if (isDarkMode) {
+    mode.classList.add('toggler');
+    themeContainer.classList.add('dark-mode');
+    console.log('Dark mode is active on load.');
+  } else {
+    mode.classList.remove('toggler');
+    themeContainer.classList.remove('dark-mode');
+    console.log('Light mode is active on load.');
+  }
+}
+
+// Call the function on load
+setInitialMode();
