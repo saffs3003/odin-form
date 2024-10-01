@@ -160,6 +160,7 @@ body.dark-mode .moon {
     width: 100%;
     z-index: 1;
     animation: slidein 2s;
+    
 }
 
 .form-container {
