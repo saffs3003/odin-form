@@ -143,15 +143,14 @@ const form = document.querySelector('form');
 form.addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent form from submitting to validate it first
     
-    const isFnameValid = validateName(fname);
-    const isLnameValid = validateName(lname);
+
     const isEmailValid = validateEmail(mail);
     const isPhoneValid = validatePhone(phone);
     const isPasswordValid = validatePassword(pass);
     const isConfirmPasswordValid = validateConfirmPassword(confirmPass);
 
     // Check if all validations passed before submitting the form
-    if (isFnameValid && isLnameValid && isEmailValid && isPhoneValid && isPasswordValid && isConfirmPasswordValid) {
+    if ( isEmailValid && isPhoneValid && isPasswordValid && isConfirmPasswordValid) {
         form.submit(); // Submit the form if all validations pass
     }
 });
